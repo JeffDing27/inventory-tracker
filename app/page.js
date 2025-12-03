@@ -130,9 +130,10 @@ export default function Home() {
       >
         Add New Item
       </Button>
-      <Box border="1px solid #333" width="100%" maxWidth="800px">
+      <Box border="1px solid #333" width={{ xs: "calc(100% - 84px)", sm: "calc(100% - 84px)", md: "100%" }} maxWidth="800px"  mx="auto" my={2} >
         <Box
           width="100%"
+          px={{ xs: 2, sm: 0 }}
           height={{ xs: "70px", sm: "90px", md: "100px" }}
           bgcolor="#ADD8E6"
           display="flex"
