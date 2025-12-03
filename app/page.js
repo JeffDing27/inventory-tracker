@@ -130,21 +130,23 @@ export default function Home() {
       >
         Add New Item
       </Button>
-      <Box border="1px solid #333">
+      <Box border="1px solid #333" width="100%" maxWidth="800px">
         <Box
-          width="800px"
-          height="100px"
+          width="100%"
+          height={{ xs: "70px", sm: "90px", md: "100px" }}
           bgcolor="#ADD8E6"
           display="flex"
           alignItems="center"
           justifyContent="center"
         >
-          <Typography variant="h2" color="#333">
+          <Typography variant="h2" color="#333"
+          sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem" } }}
+          >
             Inventory Items
           </Typography>
         </Box>
 
-        <Stack width="800px" height="300px" spacing={2} overflow="auto">
+        <Stack width="100%" height="300px" spacing={2} overflow="auto">
           {inventory.map(({ name, quantity }) => (
             <Box
               key={name}
