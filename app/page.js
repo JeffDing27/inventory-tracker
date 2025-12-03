@@ -130,7 +130,7 @@ export default function Home() {
       >
         Add New Item
       </Button>
-      <Box border="1px solid #333" width={{ xs: "calc(100% - 84px)", sm: "calc(100% - 84px)", md: "100%" }} maxWidth="800px"  mx="auto" my={2} >
+      <Box border="1px solid #333" width={{ xs: "calc(100% - 10px)", sm: "calc(100% - 10px)", md: "100%" }} maxWidth="800px"  mx="auto" my={2} >
         <Box
           width="100%"
           px={{ xs: 2, sm: 0 }}
@@ -158,14 +158,16 @@ export default function Home() {
               justifyContent="space-between"
               bgcolor="f0f0f0"
               padding={5}
+              
             >
-              <Typography variant="h3" color="#333" textAlign="center">
+              <Typography variant="h3" color="#333" textAlign="center" sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}>
                 {name.charAt(0).toUpperCase() + name.slice(1)}
               </Typography>
-              <Typography variant="h3" color="#333" textAlign="center">
+              <Typography variant="h3" color="#333" textAlign="center" sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}>
                 {quantity}
               </Typography>
               <Button
+                sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.5rem" } }}
                 variant="contained"
                 onClick={() => {
                   removeItem(name);
